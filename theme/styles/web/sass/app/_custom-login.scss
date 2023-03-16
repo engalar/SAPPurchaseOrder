@@ -1,0 +1,172 @@
+.layout-atlas {
+    &.region-split {
+        .region-topbar {
+            background-color: transparent;
+            box-shadow: none;
+            .mx-navbar {
+                margin-left: 0;
+                display: flex;
+            }
+
+            &::before {
+                content: none;
+            }
+
+            .navbar-brand {
+                img {
+                    width: 100px;
+                    height: auto;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
+
+.topbar-absolute{
+    position: absolute !important;
+    width: 100%;
+}
+
+.no-border{
+    border: 0 !important;
+}
+
+.img-fullBackground{
+    top: 0;
+    position: fixed;
+    z-index: 0;
+    width:50%;
+    object-fit: cover;
+    object-position: 85%;
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+.login-container {
+    .login-textbox {
+        position: relative;
+
+        input {
+            border-radius: 4px;
+            min-height: 56px;
+            padding: 16px;
+            z-index: 2;
+            background-color: transparent;
+            transition-property: border-width .1s ease-in-out;
+
+            &:focus {
+                border-width: 2px;
+            }
+        }
+
+        .control-label {
+            position: absolute;    
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: fit-content; 
+            font-size: 16px;
+            left: 11px;
+            padding-left: 5px;
+            z-index: 1;
+            line-height: 1.5;
+            letter-spacing: 0.15px;
+            color: rgba(0, 0, 0, 0.6);
+            transition: all .2s ease-in-out;
+        }
+        
+        &.has-content,
+        &:focus-within {
+            .control-label {
+                top: -54px;
+                font-size: 12px;
+                color: $brand-primary;
+                background: #fff;
+                padding: 0 10px 0 5px;
+                z-index: 3;
+            }
+            input {
+                border: 2px solid $brand-primary;
+            }
+        }
+
+        &.email-textbox {
+            margin-bottom: 16px;
+        }
+
+        &.password-textbox {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.region-split{
+    &:after{
+        content: "";
+        background: $bg-color-secondary;
+        height: 100%;
+        width: 50%;
+        right: 0;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+        @media (max-width: $screen-md) {
+            width: 0;
+        }
+    }
+}
+
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid{
+    padding: 16px;
+}
+
+.region-centered{
+    .mx-scrollcontainer-wrapper{
+        padding-top: 96px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        flex: 1;
+        @media (max-width: $screen-md) {
+            justify-content: center;
+            align-content: flex-start;
+            padding-top: 60px;
+        }
+
+    }
+}
+
+.region-content{
+    margin: 0 auto;
+}
+
+.btn-signin {
+    padding: 10px;
+    height: auto;
+}
+
+.form-signUp {
+    max-width: $screen-xs;
+    padding: $spacing-large;
+    margin: 0 auto;
+    
+    h1 {
+        margin: 0;
+    }
+
+    @media (max-width: $screen-md){
+        margin: 0 auto;
+        padding: 0 $spacing-medium;
+    }
+    .mx-dataview .mx-dataview-controls{
+        border-top: 0;
+        margin-top: 0;
+        .btn{
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+//
+// DISCLAIMER:
+// Do not change this file because it is core styling.
+// Customizing core files will make updating Atlas much more difficult in the future.
+// To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
+//
+
+/* ==========================================================================
+   Progress
+
+   Default Mendix Progress Widget.
+========================================================================== */
+
+.mx-progress {
+    background-repeat: no-repeat;
+    background:transparent !important;
+
+    .mx-progress-message {
+        color: var(--grayscale-text-and-titles-color)
+    }
+
+    .mx-progress-indicator {
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        padding: 0;
+        border-radius: 0;
+
+        background: var(--loader-bg-img);
+        background-repeat: no-repeat;
+        height: 120px;
+        display: block;
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: auto;
+            background: var(--loader-bg-img);
+            background-repeat: no-repeat;
+            height: 120px;
+        }
+
+        &::before {
+            animation: loader 10s infinite;
+        }
+
+        &::after {
+            animation: loader 10s -2s infinite;
+        }
+    }
+}
+
+
+@keyframes loader {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(200%, 0, 0);
+    }
+}

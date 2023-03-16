@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Typography
+   
+========================================================================== */
+
+p {
+    margin: 0;
+}
+
+label {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--grayscale-subtitles-and-labels-color);
+}
+
+.label-primary {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+}

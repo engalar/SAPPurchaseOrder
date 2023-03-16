@@ -1,0 +1,23 @@
+@import 'app/custom-variables';
+
+ 
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: $bg-color;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+  }
+  .theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #333;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+  }
+  body {
+  
+    background: var(--color-secondary);
+   
+  }
+
+
+

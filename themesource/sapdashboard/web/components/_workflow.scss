@@ -1,0 +1,94 @@
+.dashboard-tabs {
+    background: transparent;
+    box-shadow: none;
+    
+    .mx-tabcontainer-tabs {
+        border-bottom: 1px solid var(--grayscale-header-container-borders-color);
+
+        li {
+            margin-right: 0 !important;
+        }
+    }
+
+    .tab-content {
+        padding: 2vh 1vw;
+    }
+}
+
+.graphs-wrapper {
+    .card {
+        height: 100%;
+    }
+}
+
+.card-dashboard-wrapper {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 1vw;
+    padding: 0;
+    background-color: transparent;
+}
+
+.card-status {
+    width: fit-content;
+    padding: 1vh 3vw 1vh 1.5vw;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    img {
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    &--completed {
+        background-color: #93e9b7;
+    }
+
+    &--progress {
+        background-color: #9ddae1;
+    }
+
+    &--overdue {
+        background-color: #ff6464;
+    }
+
+    &--days {
+        background-color: #8fc7ff;
+    }
+
+    &--percentage {
+        background-color: #e0c3ff;
+    }
+}
+
+.filter {
+    .filter-container {
+        .form-control {
+            height: auto;
+        }
+    }
+
+    .filter-selector {
+        .filter-selector-content {
+            .filter-selector-button {
+                padding: 0;
+                margin-right: 0;
+                font-size: 14px;
+                border-radius: 0;
+            }
+        }
+    }
+
+    .btn {
+        border-radius: 0;
+    }
+}
+
+.table .column-selector .column-selector-content .column-selector-button {
+    border-radius: 0;
+    font-size: 14px;
+    padding: 0 10px;
+}

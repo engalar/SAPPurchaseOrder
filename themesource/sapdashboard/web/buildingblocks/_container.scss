@@ -1,0 +1,17 @@
+/* ==========================================================================
+    Sap container
+
+    Container with spacing to put your content in
+========================================================================== */
+.sap-container {
+    @include layout-spacing($type: padding, $direction: all, $device: responsive);
+}
+
+// Remove spacing from layoutgrid within a sap container
+.mx-scrollcontainer .mx-placeholder {
+    .sap-container {
+        .mx-layoutgrid {
+            padding: 0;
+        }
+    }
+}
